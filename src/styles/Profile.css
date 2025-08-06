@@ -1,0 +1,72 @@
+.profile {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-container {
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 25px rgba(107, 142, 107, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border: 1px solid rgba(107, 142, 107, 0.2);
+  position: relative;
+}
+
+.profile-container::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 50%;
+  width: 1px;
+  background: rgba(107, 142, 107, 0.3);
+  transform: translateX(-50%);
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.right-column > *:not(.profile-picture) {
+  align-self: flex-start;
+  width: 100%;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .profile {
+    padding: 0.8rem 1rem;
+  }
+  
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+  
+  .profile-container::before {
+    display: none;
+  }
+  
+  .right-column {
+    align-items: center;
+  }
+} 

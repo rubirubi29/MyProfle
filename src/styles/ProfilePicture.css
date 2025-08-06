@@ -1,0 +1,24 @@
+.profile-picture {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(107, 142, 107, 0.2);
+  border: 3px solid rgba(107, 142, 107, 0.3);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .profile-picture img {
+    width: 180px;
+    height: 180px;
+  }
+} 
